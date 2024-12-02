@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a href="tel:+375291872524" class="text-dark mr-3"><i class="fas fa-phone"></i> +375 29 187 25 24</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                        <li class="nav-item"><a class="nav-link" href="siding.html">Сайдинг</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gutters.html">Водостоки</a></li>
+                        <li class="nav-item"><a class="nav-link" href="works.html">Наши работы</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <a href="https://www.instagram.com/your_instagram_profile" target="_blank" class="text-dark ml-3"><i
+                        class="fab fa-instagram"></i></a>
+            </nav>
+        </header>
+
+        <section id="contact" class="mt-5">
+            <h1 class="text-center">Контакты</h1>
+            <p class="text-center">Телефон: +375 (44) 555-44-47</p>
+            <p class="text-center">Email: info@montazh-siding.by</p>
+            <p class="text-center">Адрес: г. Минск, ул. Брненская, 10</p>
+        </section>
+
+        <section id="feedback" class="mt-5">
+            <h2 class="text-center">Обратная связь</h2>
+            <form id="contact-form" class="needs-validation" novalidate>
+                <div class="form-group">
+                    <label for="name">Имя:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Сообщение:</label>
+                    <textarea class="form-control" id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Отправить</button>
+            </form>
+            <p>Карта проезда:</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d152515.2533341757!2d27.41100271640625!3d53.88380779999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfd35b1e6ad3%3A0xb61b853ddb570d9!2z0JzQuNC90YHQug!5e0!3m2!1sru!2sby!4v1627484748474!5m2!1sru!2sby"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+
+        <footer class="bg-custom text-white text-center py-3 mt-5">
+            <p>&copy; 2024 Монтаж сайдинга и водостоков. Все права защищены.</p>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

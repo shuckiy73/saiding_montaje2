@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши работы</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #b9ecc8;
+            background-image: url("https://images.unsplash.com/photo-1519681393314-a4e191a1d733?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        header {
+            background-color: #4ecfd8;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #333;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #64c3db;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px; /* Фиксированная высота для изображений */
+            object-fit: cover; /* Масштабирование изображения с сохранением пропорций */
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .modal-body img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            section {
+                margin: 10px;
+            }
+
+            .gallery img {
+                height: 150px; /* Уменьшенная высота для изображений на экранах шириной до 768px */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="text-center">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a href="tel:+375291872524" class="text-dark mr-3"><i class="fas fa-phone"></i> +375 29 187 25 24</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                        <li class="nav-item"><a class="nav-link" href="siding.html">Сайдинг</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gutters.html">Водостоки</a></li>
+                        <li class="nav-item"><a class="nav-link" href="works.html">Наши работы</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <a href="https://www.instagram.com/your_instagram_profile" target="_blank" class="text-dark ml-3"><i
+                        class="fab fa-instagram"></i></a>
+            </nav>
+        </header>
+
+        <section id="works" class="mt-5">
+            <h1 class="text-center">Наши работы</h1>
+            <div class="row gallery">
+                <div class="col-md-4 mb-4">
+                    <img src="images/work1.jpg" alt="Работа 1" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work1.jpg">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/work2.jpg" alt="Работа 2" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work2.jpg">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/work3.jpg" alt="Работа 3" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work3.jpg">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/work4.jpg" alt="Работа 4" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work4.jpg">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/work5.jpg" alt="Работа 5" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work5.jpg">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/work6.jpg" alt="Работа 6" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work6.jpg">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/work7.jpg" alt="Работа 7" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work7.jpg">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/work8.jpg" alt="Работа 8" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work8.jpg">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/work9.jpg" alt="Работа 9" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work9.jpg">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/work10.jpg" alt="Работа 10" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work10.jpg">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/work11.jpg" alt="Работа 11" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work11.jpg">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/work12.jpg" alt="Работа 12" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work12.jpg">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/work13.jpg" alt="Работа 13" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work13.jpg">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/work14.jpg" alt="Работа 14" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work14.jpg">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/work15.jpg" alt="Работа 15" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work15.jpg">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/work16.jpg" alt="Работа 16" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work16.jpg">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/work17.jpg" alt="Работа 17" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work17.jpg">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/work18.jpg" alt="Работа 18" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work18.jpg">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/work19.jpg" alt="Работа 19" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work19.jpg">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/work20.jpg" alt="Работа 20" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work20.jpg">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/work21.jpg" alt="Работа 21" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work21.jpg">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/work22.jpg" alt="Работа 22" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work22.jpg">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/work23.jpg" alt="Работа 23" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work23.jpg">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="images/work24.jpg" alt="Работа 24" class="img-fluid" data-toggle="modal" data-target="#workModal" data-image="images/work24.jpg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Модальное окно для увеличения фото -->
+        <div class="modal fade" id="workModal" tabindex="-1" role="dialog" aria-labelledby="workModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="workModalLabel">Фото работы</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="" alt="Работа" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="bg-custom text-white text-center py-3 mt-5">
+            <p>&copy; 2024 Монтаж сайдинга и водостоков. Все права защищены.</p>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#workModal').on('show.bs.modal', function(event) {
+                var button = $(event.relatedTarget); // Кнопка, которая вызвала модальное окно
+                var imageSrc = button.data('image'); // Извлечение значения атрибута data-image
+                var modal = $(this);
+                modal.find('.modal-body img').attr('src', imageSrc); // Установка src для изображения в модальном окне
+            });
+        });
+    </script>
+</body>
+
+</html>
